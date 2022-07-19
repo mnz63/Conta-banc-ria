@@ -1,0 +1,146 @@
+.create{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 270px;
+    animation: fade 1s;
+}
+
+.create p{
+    margin-top: 10px;
+    color: red;
+}
+
+.firstname, .lastname, .type {
+    position: relative;
+    margin-bottom:50px ;
+}
+
+.input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+}
+
+.input:focus {
+    outline: none;
+}
+
+label {
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color:white;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.bar:before,
+.bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: rgb(94, 39, 139);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.input:focus ~ .bar:before,
+.input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: rgb(94, 39, 139);
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container{
+        width: 95%;
+    }
+
+    .conta {
+        width: 90%;
+    }
+
+
+    .buttons-container{
+        width: 100%;
+    }
+
+    .buttons-depositar, .buttons-sacar{
+        width: 150px;
+    }
+
+    .depositar, .sacar{
+        width: 6em;
+    }
+
+    #deposit, #saque {
+        width: 100px;
+    }
+}
