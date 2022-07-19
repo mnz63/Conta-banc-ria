@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(94, 39, 139);
+    overflow: hidden;
+}
+
+.container {
+    display: none;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    align-items: center;
+    transition: 1s;
+    animation: fadein 1s;
+}
+
+.button {
+    --bg: #000;
+    --hover-bg: #ffffff;
+    --hover-text: #000;
+    color: #fff;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+}
+
+.button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button:active {
+    transform: translate(0);
+    box-shadow: none;
+}
+
+.sacar, .depositar {
+    --color: #000000;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.depositar:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background:  rgb(0, 255, 0);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+.depositar:hover {
+    color: #fff;
+}
+
+.depositar:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.depositar:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.depositar:active:before {
+    background: green;
+    transition: background 0s;
+}
+
+.sacar:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: red;
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+ .sacar:hover {
+    color: #fff;
+}
+
+.sacar:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.sacar:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.sacar:active:before {
+    background: #880000;
+    transition: background 0s;
+}
+
+
+.buttons-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5%;
+    width: 500px;
+}
+
+.buttons-sacar{
+    display: flex;
+    align-self:baseline;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    
+}
+
+.buttons-depositar{
+    display: flex;
+    align-self:baseline;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    position: absolute;
+    right: 0%;
+}
+
+.conta{
+    display: flex;
+    justify-content: space-between;
+    width: 460px;
+    margin: 20px;
+}
+
+#saque, #deposit {
+    max-width: 190px;
+    height: 30px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #b700ff;
+    caret-color: #3f3f3f;
+    padding: 5px;
+    transition: .5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+    margin: 10px;
+    background-color: #f0f0f0;
+}
+  
+  
+#saque, #deposit:focus::placeholder {
+    color: #fa4753;
+}
+
+.info{
+    display: flex;
+    text-align: center;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.info::-webkit-scrollbar{
+    display: none;
+}
+
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+    height: 100px;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 100%;
+    }
+}
