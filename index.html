@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buttons.css">
+
+</head>
+<body>
+    <div class="create" id="form">
+    
+        <div class="firstname">
+            <input required="" type="text" class="input" id="firstname">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Nome</label>
+          </div>
+
+          <div class="lastname">
+            <input required="" type="text" class="input" id="lastname">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Sobrenome</label>
+          </div>
+          
+        <button class="button" id="new">
+            Crie sua conta!
+        </button>
+
+        <p id="erro"></p>
+    </div>
+    
+    
+    <main class="container" id="container">
+
+        <div class="conta">
+            <p id="user"> </p>
+            <p id="saldo"><span style="color: rgb(94, 39, 139)">Saldo: </span>R$0,00</p>
+        </div>
+
+        <div class="info">
+            <p id="log"> </p>
+        </div>
+
+        <div class="time">
+            <p id="time"> 12:50 <br>
+                Agência: 1<br>
+                Tipo: Conta Corrente
+                Numero da conta: 55448-8
+            </p>
+        </div>
+
+        <div class="buttons-container">
+            <div class="buttons-depositar">
+                <input type="number" name="Depositar" id="deposit">
+                <button id="depositar" class="depositar"> Depositar </button>
+                
+            </div>
+        
+            <div class="buttons-sacar">   
+                <input type="number" name="Sacar" id="saque">
+                <button id="sacar" class="sacar"> Sacar </button>
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+    <script src="class.js"></script>
+</body>
+</html>
