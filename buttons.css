@@ -127,6 +127,14 @@ label {
         width: 90%;
     }
 
+    #saldo{
+        left: 108px;
+    }
+
+
+    .header{
+        width: 100%;
+    }
 
     .buttons-container{
         width: 100%;
