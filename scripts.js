@@ -15,6 +15,8 @@ const erroForm = document.getElementById("erro");
 
 
 
+
+
 function criaConta(){
 
     let usuario = nome.value +" "+  sobrenome.value
@@ -36,20 +38,29 @@ create.addEventListener("click", () =>{
 
     
 deposito.addEventListener("click", () =>{
+    if(!valorDeposito.value){
+        log.innerHTML +='Por favor digite um valor! <br>'
+        return
+    }
+
+
     conta.depositar(parseInt(valorDeposito.value))
     log.innerHTML += `Você depositou ${valorDeposito.value} reais! <br>`
-    saldo.innerHTML = `<span style="color: rgb(94, 39, 139)">Saldo: </span>${conta._saldo.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`  
+    saldo.innerHTML = `${conta._saldo.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`  
 })
 
 saque.addEventListener("click", () =>{
-    conta.sacar(parseInt(valorSaque.value))
+    
     if(!valorSaque.value){
         log.innerHTML += `Por favor digite um valor! <br>`
         return
-    } else if(parseInt(valorSaque.value) > conta._saldo){
-        log.innerHTML += `Saldo insuficiente! Operação negada.<br>`
+    }
+    else if(valorSaque.value > conta._saldo ){
+       log.innerHTML += `Saldo insuficiente! Operação negada.<br>`
         return
     }
+
+    conta.sacar(parseInt(valorSaque.value))
     log.innerHTML += `Você sacou ${parseInt(valorSaque.value)} reais! <br>`
-    saldo.innerHTML = `<span style="color: rgb(94, 39, 139)">Saldo: </span>${conta._saldo.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`  
-})
+    saldo.innerHTML = `${conta._saldo.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`  
+})  
