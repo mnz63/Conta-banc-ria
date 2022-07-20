@@ -1,4 +1,4 @@
-.create{
+.create {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,14 +7,16 @@
     animation: fade 1s;
 }
 
-.create p{
+.create p {
     margin-top: 10px;
     color: red;
 }
 
-.firstname, .lastname, .type {
+.firstname,
+.lastname,
+.type {
     position: relative;
-    margin-bottom:50px ;
+    margin-bottom: 50px;
 }
 
 .input {
@@ -48,7 +50,7 @@ label {
 .input:valid ~ label {
     top: -20px;
     font-size: 14px;
-    color:white;
+    color: white;
 }
 
 .bar {
@@ -113,13 +115,13 @@ label {
         opacity: 0%;
     }
 
-    to{
+    to {
         opacity: 100%;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .container{
+    .container {
         width: 95%;
     }
 
@@ -127,28 +129,30 @@ label {
         width: 90%;
     }
 
-    #saldo{
+    #saldo {
         left: 108px;
     }
 
-
-    .header{
+    .header {
         width: 100%;
     }
 
-    .buttons-container{
+    .buttons-container {
         width: 100%;
     }
 
-    .buttons-depositar, .buttons-sacar{
+    .buttons-depositar,
+    .buttons-sacar {
         width: 150px;
     }
 
-    .depositar, .sacar{
+    .depositar,
+    .sacar {
         width: 6em;
     }
 
-    #deposit, #saque {
+    #deposit,
+    #saque {
         width: 100px;
     }
 }
