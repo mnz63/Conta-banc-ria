@@ -13,14 +13,14 @@
     <div class="create" id="form">
     
         <div class="firstname">
-            <input required="" type="text" class="input" id="firstname">
+            <input required="" type="text" class="input" id="firstname" autocomplete="off">
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Nome</label>
           </div>
 
           <div class="lastname">
-            <input required="" type="text" class="input" id="lastname">
+            <input required="" type="text" class="input" id="lastname" autocomplete="off"> 
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Sobrenome</label>
@@ -36,12 +36,13 @@
     
     <main class="container" id="container">
         <div class="header">
-            <div class="conta">
-            <p id="user"> </p>
             <p id="saldo">R$ 0,00</p>
-            </div>
         </div>
-        
+
+        <div class="conta">
+            <p id="user"> </p>
+            <p id="time" class="time"> </p>
+        </div>
 
         <div class="info">
             <p id="log"> </p>
