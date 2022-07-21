@@ -19,6 +19,13 @@ function criaConta() {
     console.log(usuario);
 }
 
+function atualizaHora(){
+    const time = new Date
+    hora.innerHTML = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
+    window.requestAnimationFrame(atualizaHora)
+}
+
+
 create.addEventListener("click", () => {
     criaConta();
 
@@ -60,3 +67,5 @@ saque.addEventListener("click", () => {
         currency: "BRL",
     })}`;
 });
+
+atualizaHora()
